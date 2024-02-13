@@ -4,7 +4,7 @@
 Passionate Software Engineer with expertise in Machine Learning, Computer Vision, and MLOps. Dedicated to leveraging technology to solve real-world problems and drive innovation.
 
 ## Skills
-- Programming Languages: Python, C++, Rust
+- Programming Languages: Python, C++, Rust  :snake: :hammer_and_wrench:
 - Technologies: Deep Learning, Computer Vision, MLOps
 - Tools: AWS Services, PyTorch
 
