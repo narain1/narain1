@@ -10,7 +10,7 @@ Passionate Software Engineer with expertise in Machine Learning, Computer Vision
 
 ## Education
 - B.Tech in Mechanical Engineering, Amrita Vishwa Vidyapeetham
-- MS in Computer Engineering (Computer Systems), Arizona State University
+- MS in Computer Engineering (Computer Systems), Arizona State University :school_satchel:
 
 ## Contact
 - Email: npattab1@asu.edu
