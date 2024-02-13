@@ -5,8 +5,8 @@ Passionate Software Engineer with expertise in Machine Learning, Computer Vision
 
 ## Skills
 - Programming Languages: Python, C++, Rust  :snake: :hammer_and_wrench:
-- Technologies: Deep Learning, Computer Vision, MLOps
-- Tools: AWS Services, PyTorch
+- Technologies: Deep Learning, Computer Vision, MLOps  :telescope: :robot:
+- Tools: AWS Services, PyTorch :cloud: :test_tube:
 
 ## Education
 - B.Tech in Mechanical Engineering, Amrita Vishwa Vidyapeetham
