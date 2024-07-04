@@ -13,7 +13,7 @@ Passionate Software Engineer with expertise in Machine Learning, Computer Vision
 - MS in Computer Engineering (Computer Systems), Arizona State University :school_satchel:
 
 ## Contact
-- Email: npattab1@asu.edu
+- Email: narain13579@gmail.com
 - LinkedIn: [linkedin.com/in/narainp](https://www.linkedin.com/in/narainp)
 
 <!--
