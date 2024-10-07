@@ -31,4 +31,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=narain1&layout=compact)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=narain1&layout=compact&hide=jupyter%20notebook,html,css)
