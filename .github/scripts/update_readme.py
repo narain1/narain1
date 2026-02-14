@@ -43,7 +43,7 @@ def generate_language_bars(stats, top_n=5):
     for lang, percent in top_langs:
         # Create a visual bar using Unicode block characters
         bar_length = 20
-        filled = int((percent / 100) * bar_length)
+        filled = round((percent / 100) * bar_length)
         bar = "█" * filled + "░" * (bar_length - filled)
         bars.append(f"**{lang}** - {percent:.1f}%")
         bars.append(f"```{bar}```")

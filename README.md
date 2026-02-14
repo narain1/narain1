@@ -34,10 +34,16 @@ Here are some ideas to get you started:
 <!-- LANGUAGE-STATS:START -->
 ### 📊 Top Languages (by lines of code)
 
-**Markdown** - 100.0%
-```████████████████████```
+**Python** - 56.3%
+```███████████░░░░░░░░░```
 
-*Based on 34 lines of code added across all commits*
+**Markdown** - 31.6%
+```██████░░░░░░░░░░░░░░```
+
+**YAML** - 12.1%
+```██░░░░░░░░░░░░░░░░░░```
+
+*Based on 462 lines of code added across all commits*
 
 <!-- LANGUAGE-STATS:END -->
 

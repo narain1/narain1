@@ -73,7 +73,11 @@ def analyze_commits():
         check=True
     )
     
-    commits = result.stdout.strip().split('\n')
+    if not result.stdout.strip():
+        print("No commits found in repository.")
+        return language_stats
+    
+    commits = [c for c in result.stdout.strip().split('\n') if c]
     print(f"Analyzing {len(commits)} commits...")
     
     for commit_hash in commits:
