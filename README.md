@@ -31,4 +31,14 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+<!-- LANGUAGE-STATS:START -->
+### 📊 Top Languages (by lines of code)
+
+**Markdown** - 100.0%
+```████████████████████```
+
+*Based on 34 lines of code added across all commits*
+
+<!-- LANGUAGE-STATS:END -->
+
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=narain1&layout=compact&hide=jupyter%20notebook,html,css)
