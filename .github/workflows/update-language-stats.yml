@@ -37,7 +37,11 @@ jobs:
           
       - name: Analyze language statistics
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use personal access token if available, otherwise use GITHUB_TOKEN
+          # For private repos, you need to create a PAT with 'repo' scope
+          # and add it as a secret named GH_PAT
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          ANALYZE_ALL_REPOS: 'true'
         run: python .github/scripts/analyze_languages.py
         
       - name: Update README

@@ -1,6 +1,6 @@
 # Language Statistics Feature
 
-This repository includes an automated language statistics tracking system that analyzes all commits and pull requests to calculate the lines of code added for each programming language.
+This repository includes an automated language statistics tracking system that analyzes **all your repositories** (both public and private) to calculate the lines of code added for each programming language across your entire GitHub profile.
 
 ## How It Works
 
@@ -14,9 +14,12 @@ This repository includes an automated language statistics tracking system that a
      - Manual trigger via workflow dispatch
    
 2. **Language Analysis Script** (`.github/scripts/analyze_languages.py`)
-   - Analyzes all commits in the repository
+   - Connects to GitHub API to fetch all your repositories
+   - Clones each repository temporarily
+   - Analyzes all commits in each repository
    - Counts lines of code added by language based on file extensions
    - Supports 40+ programming languages
+   - Aggregates statistics across all repositories
    - Generates statistics in JSON format
 
 3. **README Update Script** (`.github/scripts/update_readme.py`)
@@ -24,6 +27,28 @@ This repository includes an automated language statistics tracking system that a
    - Creates visual progress bars for top 5 languages
    - Updates the README.md with current statistics
    - Maintains markers: `<!-- LANGUAGE-STATS:START -->` and `<!-- LANGUAGE-STATS:END -->`
+
+### Authentication
+
+To analyze private repositories, you need to set up a Personal Access Token (PAT):
+
+1. **Create a Personal Access Token**:
+   - Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
+   - Click "Generate new token (classic)"
+   - Give it a descriptive name like "Language Statistics"
+   - Select scopes:
+     - `repo` (Full control of private repositories) - **Required for private repos**
+     - `read:user` (Read user profile data) - Optional but recommended
+   - Click "Generate token" and copy the token
+
+2. **Add the token as a repository secret**:
+   - Go to your repository Settings → Secrets and variables → Actions
+   - Click "New repository secret"
+   - Name: `GH_PAT`
+   - Value: Paste your personal access token
+   - Click "Add secret"
+
+**Note**: The workflow will use `GH_PAT` if available, otherwise it falls back to the default `GITHUB_TOKEN` (which only has access to public repositories).
 
 ### Supported Languages
 
@@ -53,11 +78,15 @@ You can manually trigger the workflow:
 
 To customize the feature:
 
-1. **Change the number of languages displayed**: Edit `.github/scripts/update_readme.py` and modify the `top_n` parameter in the `generate_language_bars()` function.
+1. **Analyze only current repository**: Set the environment variable `ANALYZE_ALL_REPOS=false` in the workflow.
 
-2. **Add more language extensions**: Edit `.github/scripts/analyze_languages.py` and add entries to the `LANGUAGE_EXTENSIONS` dictionary.
+2. **Change the number of languages displayed**: Edit `.github/scripts/update_readme.py` and modify the `top_n` parameter in the `generate_language_bars()` function.
 
-3. **Modify the update schedule**: Edit `.github/workflows/update-language-stats.yml` and change the `cron` schedule.
+3. **Add more language extensions**: Edit `.github/scripts/analyze_languages.py` and add entries to the `LANGUAGE_EXTENSIONS` dictionary.
+
+4. **Modify the update schedule**: Edit `.github/workflows/update-language-stats.yml` and change the `cron` schedule.
+
+5. **Exclude specific repositories**: Modify the `analyze_all_repositories()` function to filter out repositories by name.
 
 ## Display Format
 
@@ -77,10 +106,19 @@ The statistics appear in your README as:
 
 ## How Statistics are Calculated
 
+- **Multi-Repository Analysis**: The system analyzes ALL your repositories (where you are the owner)
 - **Lines Added**: The system counts only lines added (not deleted) in all commits
 - **Per Language**: Lines are attributed to languages based on file extensions
-- **Across All Commits**: All commits in all branches are analyzed
-- **Cumulative**: Statistics represent the total contribution over the repository's lifetime
+- **Across All Commits**: All commits in all branches of all repositories are analyzed
+- **Cumulative**: Statistics represent the total contribution across all your repositories
+- **Fork Handling**: Forked repositories are skipped to avoid double-counting
+
+## Performance Considerations
+
+- The workflow may take several minutes to complete depending on the number and size of repositories
+- Repositories are cloned temporarily and deleted after analysis
+- Rate limiting is respected with automatic pausing between repositories
+- Large repositories (>5 minute clone time) will timeout gracefully
 
 ## Notes
 
@@ -93,9 +131,17 @@ The statistics appear in your README as:
 
 If the statistics don't update:
 1. Check the Actions tab for workflow run status
-2. Ensure the workflow has write permissions to the repository
-3. Verify that the README contains the marker comments
-4. Check the workflow logs for any error messages
+2. Ensure you have created a `GH_PAT` secret with the `repo` scope for private repository access
+3. Verify that the workflow has write permissions to the repository
+4. Verify that the README contains the marker comments
+5. Check the workflow logs for any error messages
+6. Ensure your token hasn't expired (PATs need to be renewed)
+
+### Common Issues
+
+- **"No commits found"**: The token may not have access to repositories
+- **Clone timeouts**: Very large repositories may timeout - this is normal
+- **Rate limiting**: The workflow respects GitHub rate limits and will pause automatically
 
 ## Example Output
 
