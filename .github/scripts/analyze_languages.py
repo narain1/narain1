@@ -28,6 +28,7 @@ LANGUAGE_EXTENSIONS = {
     '.c': 'C',
     '.h': 'C/C++',
     '.hpp': 'C++',
+    '.cu': 'CUDA',
     '.cs': 'C#',
     '.go': 'Go',
     '.rs': 'Rust',

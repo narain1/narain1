@@ -53,7 +53,7 @@ To analyze private repositories, you need to set up a Personal Access Token (PAT
 ### Supported Languages
 
 The system automatically detects and tracks the following **coding** languages (markup and configuration files are excluded):
-- Python, TypeScript, Java, C++, C, C#
+- Python, TypeScript, Java, C++, C, CUDA, C#
 - Go, Rust, Ruby, PHP, Swift, Kotlin, Scala
 - R, Objective-C, Shell, SQL
 - Vue, Dart, Lua, Perl

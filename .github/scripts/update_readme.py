@@ -37,6 +37,7 @@ LANGUAGE_COLORS = {
     'C++': '🟥',  # Red
     'C': '🟨',  # Yellow
     'C/C++': '🟥',  # Red
+    'CUDA': '🟩',  # Green
     'C#': '🟩',  # Green
     'Go': '🟨',  # Yellow
     'Rust': '🟧',  # Orange
