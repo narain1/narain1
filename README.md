@@ -52,7 +52,3 @@ Here are some ideas to get you started:
 *Based on 129,086 lines of code added across all commits*
 
 <!-- LANGUAGE-STATS:END -->
-
-> 💡 **Note**: Language statistics are automatically updated across all my repositories. See [SETUP_GUIDE.md](SETUP_GUIDE.md) for setup instructions.
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=narain1&layout=compact&hide=jupyter%20notebook,html,css)
