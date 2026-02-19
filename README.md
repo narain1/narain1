@@ -30,3 +30,29 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+<!-- LANGUAGE-STATS:START -->
+### 📊 Top Languages (by lines of code)
+
+**JSON** - 92.3%
+```██████████████████░░```
+
+**Python** - 2.5%
+```█░░░░░░░░░░░░░░░░░░░```
+
+**JavaScript** - 1.6%
+```░░░░░░░░░░░░░░░░░░░░```
+
+**HTML** - 0.9%
+```░░░░░░░░░░░░░░░░░░░░```
+
+**XML** - 0.7%
+```░░░░░░░░░░░░░░░░░░░░```
+
+*Based on 3,257,031 lines of code added across all commits*
+
+<!-- LANGUAGE-STATS:END -->
+
+> 💡 **Note**: Language statistics are automatically updated across all my repositories. See [SETUP_GUIDE.md](SETUP_GUIDE.md) for setup instructions.
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=narain1&layout=compact&hide=jupyter%20notebook,html,css)
