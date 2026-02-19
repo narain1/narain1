@@ -52,14 +52,13 @@ To analyze private repositories, you need to set up a Personal Access Token (PAT
 
 ### Supported Languages
 
-The system automatically detects and tracks the following languages:
-- Python, JavaScript, TypeScript, Java, C++, C, C#
+The system automatically detects and tracks the following **coding** languages (markup and configuration files are excluded):
+- Python, TypeScript, Java, C++, C, CUDA, C#
 - Go, Rust, Ruby, PHP, Swift, Kotlin, Scala
 - R, Objective-C, Shell, SQL
-- HTML, CSS, SCSS, SASS, Markdown
-- JSON, XML, YAML, TOML
 - Vue, Dart, Lua, Perl
-- And more...
+
+**Excluded:** HTML, CSS, SCSS, SASS, JavaScript, Markdown, JSON, XML, YAML, TOML, Jupyter Notebooks
 
 ## Usage
 
@@ -82,7 +81,7 @@ To customize the feature:
 
 2. **Change the number of languages displayed**: Edit `.github/scripts/update_readme.py` and modify the `top_n` parameter in the `generate_language_bars()` function.
 
-3. **Add more language extensions**: Edit `.github/scripts/analyze_languages.py` and add entries to the `LANGUAGE_EXTENSIONS` dictionary.
+3. **Add more language extensions**: Edit `.github/scripts/analyze_languages.py` and add entries to the `LANGUAGE_EXTENSIONS` dictionary. Note that the system only tracks coding languages and excludes markup/configuration files like HTML, CSS, JSON, YAML, etc.
 
 4. **Modify the update schedule**: Edit `.github/workflows/update-language-stats.yml` and change the `cron` schedule.
 
@@ -90,19 +89,21 @@ To customize the feature:
 
 ## Display Format
 
-The statistics appear in your README as:
+The statistics appear in your README with colored progress bars for each language:
 
 ```
 ### 📊 Top Languages (by lines of code)
 
 **Python** - 45.2%
-```████████████████████```
+🟦🟦🟦🟦🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**JavaScript** - 30.5%
-```██████████████░░░░░░```
+**TypeScript** - 30.5%
+🟦🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 ...
 ```
+
+Each language uses a distinct color for its progress bar, making it easy to visually distinguish between different technologies.
 
 ## How Statistics are Calculated
 
