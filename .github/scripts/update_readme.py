@@ -32,14 +32,13 @@ def calculate_percentages(stats):
 # Color mapping for different languages (using ANSI-style color names)
 LANGUAGE_COLORS = {
     'Python': '🟦',  # Blue
-    'JavaScript': '🟨',  # Yellow
-    'TypeScript': '🟦',  # Blue
+    'TypeScript': '🟪',  # Purple
     'Java': '🟧',  # Orange
-    'C++': '🟪',  # Purple
-    'C': '🟪',  # Purple
-    'C/C++': '🟪',  # Purple
+    'C++': '🟥',  # Red
+    'C': '🟨',  # Yellow
+    'C/C++': '🟥',  # Red
     'C#': '🟩',  # Green
-    'Go': '🟦',  # Blue
+    'Go': '🟨',  # Yellow
     'Rust': '🟧',  # Orange
     'Ruby': '🟥',  # Red
     'PHP': '🟪',  # Purple
