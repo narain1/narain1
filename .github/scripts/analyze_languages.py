@@ -16,11 +16,10 @@ from github import Github
 import time
 
 # Language file extensions mapping
+# Only includes actual coding languages, excludes markup/config files
 LANGUAGE_EXTENSIONS = {
     '.py': 'Python',
-    '.js': 'JavaScript',
     '.ts': 'TypeScript',
-    '.jsx': 'JavaScript',
     '.tsx': 'TypeScript',
     '.java': 'Java',
     '.cpp': 'C++',
@@ -43,16 +42,6 @@ LANGUAGE_EXTENSIONS = {
     '.sh': 'Shell',
     '.bash': 'Shell',
     '.sql': 'SQL',
-    '.html': 'HTML',
-    '.css': 'CSS',
-    '.scss': 'SCSS',
-    '.sass': 'SASS',
-    '.md': 'Markdown',
-    '.json': 'JSON',
-    '.xml': 'XML',
-    '.yaml': 'YAML',
-    '.yml': 'YAML',
-    '.toml': 'TOML',
     '.vue': 'Vue',
     '.dart': 'Dart',
     '.lua': 'Lua',

@@ -29,8 +29,35 @@ def calculate_percentages(stats):
     
     return percentages
 
+# Color mapping for different languages (using ANSI-style color names)
+LANGUAGE_COLORS = {
+    'Python': '🟦',  # Blue
+    'JavaScript': '🟨',  # Yellow
+    'TypeScript': '🟦',  # Blue
+    'Java': '🟧',  # Orange
+    'C++': '🟪',  # Purple
+    'C': '🟪',  # Purple
+    'C/C++': '🟪',  # Purple
+    'C#': '🟩',  # Green
+    'Go': '🟦',  # Blue
+    'Rust': '🟧',  # Orange
+    'Ruby': '🟥',  # Red
+    'PHP': '🟪',  # Purple
+    'Swift': '🟧',  # Orange
+    'Kotlin': '🟪',  # Purple
+    'Scala': '🟥',  # Red
+    'R': '🟦',  # Blue
+    'Objective-C': '🟦',  # Blue
+    'Shell': '🟩',  # Green
+    'SQL': '🟦',  # Blue
+    'Vue': '🟩',  # Green
+    'Dart': '🟦',  # Blue
+    'Lua': '🟦',  # Blue
+    'Perl': '🟦',  # Blue
+}
+
 def generate_language_bars(stats, top_n=5):
-    """Generate visual progress bars for top languages."""
+    """Generate visual progress bars for top languages with different colors."""
     percentages = calculate_percentages(stats)
     
     # Get top N languages
@@ -40,13 +67,19 @@ def generate_language_bars(stats, top_n=5):
     bars.append("### 📊 Top Languages (by lines of code)")
     bars.append("")
     
-    for lang, percent in top_langs:
-        # Create a visual bar using Unicode block characters
+    # Define a list of colored blocks for variety
+    colored_blocks = ['🟦', '🟩', '🟧', '🟥', '🟪', '🟨']
+    
+    for idx, (lang, percent) in enumerate(top_langs):
+        # Get color for this language, or cycle through colors
+        color_block = LANGUAGE_COLORS.get(lang, colored_blocks[idx % len(colored_blocks)])
+        
+        # Create a visual bar using colored emoji blocks
         bar_length = 20
         filled = round((percent / 100) * bar_length)
-        bar = "█" * filled + "░" * (bar_length - filled)
+        bar = color_block * filled + "⬜" * (bar_length - filled)
         bars.append(f"**{lang}** - {percent:.1f}%")
-        bars.append(f"```{bar}```")
+        bars.append(f"{bar}")
         bars.append("")
     
     total_lines = sum(stats.values())
