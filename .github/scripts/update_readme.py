@@ -29,7 +29,7 @@ def calculate_percentages(stats):
     
     return percentages
 
-# Color mapping for different languages (using ANSI-style color names)
+# Color mapping for different languages using emoji blocks
 LANGUAGE_COLORS = {
     'Python': '🟦',  # Blue
     'TypeScript': '🟪',  # Purple
@@ -78,7 +78,7 @@ def generate_language_bars(stats, top_n=5):
         filled = round((percent / 100) * bar_length)
         bar = color_block * filled + "⬜" * (bar_length - filled)
         bars.append(f"**{lang}** - {percent:.1f}%")
-        bars.append(f"{bar}")
+        bars.append(bar)
         bars.append("")
     
     total_lines = sum(stats.values())
