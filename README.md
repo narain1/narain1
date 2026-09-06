@@ -20,21 +20,21 @@ Passionate Software Engineer with expertise in Machine Learning, Computer Vision
 <!-- LANGUAGE-STATS:START -->
 ### 📊 Top Languages (by lines of code)
 
-**Python** - 63.2%
+**Python** - 62.8%
 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜
 
-**TypeScript** - 14.0%
-🟪🟪🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+**TypeScript** - 12.2%
+🟪🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**CUDA** - 10.3%
+**CUDA** - 9.0%
 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**C** - 6.0%
+**C** - 5.2%
 🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**C++** - 4.0%
+**C++** - 5.2%
 🟥⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-*Based on 134,327 lines of code added across all commits*
+*Based on 154,879 lines of code added across all commits*
 
 <!-- LANGUAGE-STATS:END -->
