@@ -15,3 +15,25 @@ Passionate Software Engineer with expertise in Machine Learning, Computer Vision
 ## Contact
 - Email: narain13579@gmail.com
 - LinkedIn: [linkedin.com/in/narainp](https://www.linkedin.com/in/narainp)
+
+<!-- LANGUAGE-STATS:START -->
+### 📊 Top Languages (by lines of code)
+
+**Rust** - 55.3%
+🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧⬜⬜⬜⬜⬜⬜⬜⬜⬜
+
+**Python** - 34.6%
+🟦🟦🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+
+**TypeScript** - 3.2%
+🟪⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+
+**CUDA** - 2.4%
+⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+
+**C++** - 1.4%
+⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+
+*Based on 583,877 lines of code added across all commits*
+
+<!-- LANGUAGE-STATS:END -->
